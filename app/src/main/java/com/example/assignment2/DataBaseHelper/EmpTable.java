@@ -112,7 +112,48 @@ public class EmpTable extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS "+ EMP_TABLE);
+        onCreate(db);
+    }
 
+    public int getNumberOfEmpFromDepWithSalary()
+    {
+        String queryString = "SELECT COUNT("+ COLUMN_SAL + ") FROM "+ EMP_TABLE +" WHERE "+ COLUMN_DEPTNO + "=30 AND "+ COLUMN_SAL +" > 0";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(queryString, null);
+
+        int sum=0;
+
+        if(cursor.moveToFirst())
+        {
+            while (!cursor.isAfterLast()) {
+                sum = cursor.getInt(0);
+                cursor.moveToNext();
+            }
+        }
+        cursor.close();
+        db.close();
+        return sum;
+    }
+
+    public int getNumberOfEmpFromDepWithComm()
+    {
+        String queryString = "SELECT COUNT("+ COLUMN_COMM + ") FROM "+ EMP_TABLE +" WHERE "+ COLUMN_DEPTNO + "=20 AND "+ COLUMN_COMM +" > 0";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(queryString, null);
+
+        int sum=0;
+
+        if(cursor.moveToFirst())
+        {
+            while (!cursor.isAfterLast()) {
+                sum = cursor.getInt(0);
+                cursor.moveToNext();
+            }
+        }
+        cursor.close();
+        db.close();
+        return sum;
     }
 }
 

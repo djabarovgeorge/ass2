@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_menuFragment_to_locationFragment"
             app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_commFragment"
+            app:destination="@id/commFragment" />
     </fragment>
     <fragment
         android:id="@+id/deptFragment"
@@ -27,4 +30,9 @@
         android:name="com.example.assignment2.LocationFragment"
         android:label="fragment_location"
         tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/commFragment"
+        android:name="com.example.assignment2.CommFragment"
+        android:label="fragment_comm"
+        tools:layout="@layout/fragment_comm" />
 </navigation>

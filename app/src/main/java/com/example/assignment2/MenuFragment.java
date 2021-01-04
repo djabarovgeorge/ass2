@@ -24,6 +24,9 @@ public class MenuFragment extends Fragment {
         Button locBtn = view.findViewById(R.id.menu_fragment_location_btn);
         locBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_locationFragment));
 
+        Button commBtn = view.findViewById(R.id.menu_fragment_comm_btn);
+        commBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_commFragment));
+
         return view;
     }
 }

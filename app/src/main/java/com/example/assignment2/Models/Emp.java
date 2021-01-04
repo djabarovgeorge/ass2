@@ -11,6 +11,8 @@ public class Emp {
     private int comm;
     private int deptNumber;
 
+    public Emp(){ }
+
     public Emp(int empNumber, String empName, String job, int managerId, String date, int sal, int comm, int deptNumber) {
         this.empNumber = empNumber;
         this.empName = empName;

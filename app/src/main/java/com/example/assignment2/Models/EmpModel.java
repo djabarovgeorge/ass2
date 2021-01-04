@@ -36,4 +36,14 @@ public class EmpModel {
     public boolean clearTable(){
         return empTable.clearTable();
     }
+
+    public int getNumberOfEmpFromDepWithSalary()
+    {
+        return empTable.getNumberOfEmpFromDepWithSalary();
+    }
+
+    public int getNumberOfEmpFromDepWithComm()
+    {
+        return empTable.getNumberOfEmpFromDepWithComm();
+    }
 }

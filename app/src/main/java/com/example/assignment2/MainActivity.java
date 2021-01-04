@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDeptDataBase() {
-//        DeptModel.instance.clearTable();
+        DeptModel.instance.clearTable();
         DeptModel.instance.addDept(new Dept(10,"ACCOUNTING","NEW YORK"));
         DeptModel.instance.addDept(new Dept(20,"RESEARCH","DALLAS"));
         DeptModel.instance.addDept(new Dept(30,"SALES","CHICAGO"));
         DeptModel.instance.addDept(new Dept(40,"OPERATIONS","BOSTON"));
     }
     private void initEmpDataBase() {
-//        EmpModel.instance.clearTable();
+        EmpModel.instance.clearTable();
         EmpModel.instance.addEmp(new Emp(7369,"SMITH","CLERK",7902,"17/12/1980",800,0,20 ));
         EmpModel.instance.addEmp(new Emp(7499,"ALLEN","SALESMAN",7698,"20/02/1981",1600,300,30));
     }

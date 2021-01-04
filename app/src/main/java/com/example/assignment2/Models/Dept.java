@@ -6,6 +6,8 @@ public class Dept {
     private String dName;
     private String loc;
 
+    public Dept(){}
+
     public Dept(int deptNumber, String dName, String loc) {
         this.deptNumber = deptNumber;
         this.dName = dName;
